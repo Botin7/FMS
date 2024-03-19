@@ -1,0 +1,387 @@
+@font-face{
+    font-family:MilkyNice-Clean;
+    src:url(../asssests/fonts/MilkyNice-Clean.otf)
+}
+
+.header{
+    border: 3px solid black;
+    background-color:#D2D2D2;
+    height: 70px;
+}
+#panda-box{
+    margin-right: 100px;
+}
+
+#option_B{
+    float: right;  
+    margin-right: 20px;
+    background-color: #D2D2D2;
+    margin-top: 10px;
+    border: none;
+    width: auto;
+}
+#option{
+    width: 35px;
+}
+
+.search{
+    width: 442.5px;
+    margin: auto;
+}
+body {
+    font-family: Arial;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  form.search input[type=text] {
+    padding: 10px;
+    font-size:20px;
+    height: 70px;
+    border-right: 1px solid grey ;
+    float: left;
+    width: 340px;
+    background: #f1f1f1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom:1px solid grey ;
+  }
+  
+  form.search button {
+    float: left;
+    width: 100px;
+    background: #cfcece;
+    color: black;
+    font-size: 20px;
+    border: 1px solid grey;
+    cursor: pointer;
+    height: 70px;
+    border-left: 1px solid grey ;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom:1px solid grey ;
+  }
+  
+  form.search button:hover {
+    background: #ED5050;
+  }
+  
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+#pf_name{
+    float: right;
+    margin-right: 10px;
+}
+
+#name{
+    /* float: right; */
+    font-size: small;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    bottom: 10%;
+    font-weight: bold;
+    
+}
+h2{
+    margin-left: 30px;
+}
+#panda{
+    width: 65px; 
+    float: right;
+    border-radius: 90%;
+}
+
+.background{
+    border: 3px solid black;
+    border-top: 0px;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+#logo{
+    margin-left: 70px;
+    width: 100px;
+}
+#brandName{
+    margin-left: 70px;
+    font-weight: bold;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    font-size: larger;
+}
+#menu-Bar{
+    background-color:#D2D2D2 ;
+    height: 50px;
+    display: flex;
+}
+
+button{
+    border: 1px solid black;
+    width: 260px;
+    height: 49px;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    background-color:#D2D2D2 ;
+}
+#special{
+    border: 1px solid black;
+    width: auto;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}
+#click{
+    float: right;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid black;
+    height: auto;
+    background-color: #ED5050;
+    color: white;
+    width: 200px;
+    
+
+}#click1{
+    float: right;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid black;
+    height: auto;
+    background-color: #ED5050;
+    color: white;
+    width: 200px;
+}
+.container{
+    position: relative;
+    opacity: 3.5;
+    
+}
+td{
+    border: 1px solid black;
+}
+
+.text_block{
+    font-size: 34px;
+    color: white;
+    position: absolute;
+    align-content: center;
+    top: 70%;
+    left: 30%;
+    font: bold;
+}
+#bg{
+    width: 100%;
+    height: 570px;
+    
+    
+}
+h1{
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+    text-align: center;
+}
+p{
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    font-weight:normal;
+    font-style:normal;
+}
+#box1{
+    border: 1px solid black;
+    background-color: white;
+    height: 200px;
+    width: 33.3%;
+}
+
+#opening{
+    border: 1px solid black;
+    background-color: white;
+    height: 200px;
+    width: 50%;
+}
+
+#box_cont{
+
+    border: 1px solid black;
+    background-color: white;
+    height: 200px;
+    width: 50%;
+}
+
+#promotion{
+    background-color: rgb(196, 28, 196);
+    width: 120px;
+    color: white;
+    font-size: x-large;
+    margin-left: -2px;
+    height: 30px;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+}
+#promotion1{
+    background-color:blue;
+    width: 100px;
+    color: white;
+    font-size: x-large;
+    margin-left: -2px;
+    height: 30px;
+}
+#promotion2{
+    background-color:blue;
+    width: 100px;
+    color: white;
+    font-size: x-large;
+    margin-left: -2px;
+    margin-top: -35px;
+    height: 30px;
+}
+
+
+#product{
+
+width: 230px;
+    
+}
+#product1{
+
+    width: 270px;
+} 
+#product2{
+
+    width: 250px;
+} 
+#Hours{
+    width: 240px;
+    margin-left: 170px;
+}
+
+#message{
+    margin: 5px 30px;
+    height: 40px;
+    font-size: larger;
+}
+#subject{
+    margin: 10px 30px;
+    width: 550px;
+    height: 150px;
+    font-size: larger;
+}
+#send{
+    margin-left: 240px;
+    color: white;
+    background-color: #ED5050;
+}
+
+
+#name{
+    font-size: large;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    margin-top: -5px;
+
+}
+#opening_H{
+    font-size: x-large;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+}
+#Contact{
+
+    font-size: xx-large;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    margin-top: -160px;
+    font: bolder;
+}
+#type{
+    font-size: medium;
+    float: right;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+}
+
+#caption{
+    /* float: right; */
+    font-size: medium;
+    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+}
+#cart_b{
+    background-color: white;
+    width: 48%;
+}
+#cart{
+    height: 100%;
+}
+.order{
+    background-color: yellow;
+    color: black;
+    width: 100%;
+}
+
+.price{
+    width: 30%;
+    text-align: center;
+}
+
+.product_section{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 30% 30% 30%;
+    padding-left: 5%;
+    margin-top: 20px;
+}
+
+.product_box{
+    /* width: 30%; */
+
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+}
+
+.product_descrip{
+    display: flex;
+    width: 100%;
+}
+
+.product_img{
+    width: 50%;
+}
+
+.product_detail{
+    width: 50%;
+}
+.product_btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.order_btn_form{
+    width: 48%;
+    background-color: yellow;
+    color: black;
+}
+
+#noproduct{
+    width: 33%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D2D2D2;
+    height: 150px;
+    border: 2px solid black;
+    font-size: 1.5em;
+}
+
+#adminBtn{
+    font-size: 1em;
+}
+@media (max-width:400px) {
+    #menu-Bar{
+        flex-direction: column;
+    }
+    
+}

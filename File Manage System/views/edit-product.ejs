@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>ធ្វើបច្ចុប្បន្នភាពឯកសារ</title>
+    <link rel="icon" type="image/x-icon" href="../public/assets/img/android-chrome-512x512.png">
+</head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div style="margin-left:10px ;">
+  <img style="width: 100px; margin-left: 20px;" id="logo" src="../public/assets/img/Moeys.png" alt="" srcset=""><br>
+  
+            <span id="brandName">ប្រព័ន្ធគ្រប់គ្រងឯកសារ</span></div>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header" style="height: 50px; text-align:center;font-weight: bold;">
+         ធ្វើបច្ចុប្បន្នភាពឯកសារ  
+        </div>
+        <div class="card-body">    
+             <form action="/edit-filepage/<%= product._id %>" class="" method="POST">                             
+            <div class="form-group">
+              <label for="fileName"style="font-weight: bold;">ល.រ</label>
+              <input type="text" class="form-control" name="ID" value="<%= product.ID %>">
+            </div>
+            <div class="form-group">
+                <label for="fileName"style="font-weight: bold;">លេខចូល</label>
+                <input type="text" class="form-control" name="FID"  value="<%= product.FID %>">
+              </div>
+              <div class="form-group">
+                <label for="fileName"style="font-weight: bold;">លិខិតលេខ</label>
+                <input type="text" class="form-control" name="FNum"  value="<%= product.FNum %>">
+              </div>
+              <div class="form-group">
+                <label for="fileName"style="font-weight: bold;">អង្គភាព</label>
+                <input type="text" class="form-control" name="title" value="<%= product.title %>">
+              </div>
+              <div class="form-group">
+                <label for="fileName"style="font-weight: bold;">បរិយាយ/កម្មវត្ថុនៃកិច្ចប្រជុំ</label>
+                <input type="text" class="form-control" name="description" value="<%= product.description %>">
+              </div>
+              <div class="form-group">
+                <label for="fileName"style="font-weight: bold;">ចំនួនថវិកា</label>
+                <input type="text" class="form-control" name="price" value="<%= product.price %>">
+              </div>
+            <div class="form-group">
+              <label for="category" style="font-weight: bold;">ប្រភេទឯកសារ</label>
+                    <select id="category" class="form-control" name="category" style="height: max-content;">
+                        <option selected value=""><%= product.category %></option>
+                        <option value="លិខិតស្នើសុំថវិកាចំណាយ">លិខិតស្នើសុំថវិកាចំណាយ(ឧទន,រជ្ជទេយ្យ,រៀបចំសិក្ខាសិលា...)</option>
+                        <option value="លិខិតអញ្ជើញ">លិខិតអញ្ជើញ</option>
+                        <option value="អង្គភាពក្រោមអ.គ.រ.ហ">អង្គភាពក្រោមអ.គ.រ.ហ</option>
+                        <option value="លិខិតរដ្ឋបាលទូទៅ">លិខិតរដ្ឋបាលទូទៅ(លិខិតទូទាត់,ឯកសារឆ្លងចំណារ,របាយការណ៍,សុំច្បាប់,បញ្ជីវត្តមាន,ប្រកាស,សជណ...)</option>
+                        <option value="ឯកសារគម្រោង">ឯកសារគម្រោង</option>
+                        <option value="លទ្ធកម្ម">លទ្ធកម្ម</option>
+                        <option value="សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ">សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ</option>
+                    </select>
+                <!-- Add more categories as needed -->
+            </div>    <div class="form-group">
+              <label for="Filetype" style="font-weight: bold;">ប្រភេទ</label>
+              <select id="category" class="form-control" name="Filetype" style="height: max-content;">
+                  <option selected value=""><%= product.Filetype %></option>
+                  <option value="ឯកភាព">ឯកភាព</option>
+                  <option value="កាត់ស្តុក">កាត់ស្តុក</option>
+                  <option value="អញ្ជើញ">អញ្ជើញ</option>
+                  <option value="ទូទៅ">ទូទៅ</option>
+                  <option value="ប្រចាំសប្តាហ៍">ប្រចាំសប្តាហ៍</option>
+                  <option value="ប្រចាំខែ">ប្រចាំខែ</option>
+                  <option value="ប្រចាំឆ្នាំ">ប្រចាំឆ្នាំ</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="fileName" style="font-weight: bold;">កត់ត្រាឯកសារខុស</label><br>
+            <label for="">លើកទី១:</label>
+            <input type="text" class="form-control" name="dateChIn1" value="<%= product.dateChIn1%>">
+            <input type="text" class="form-control" name="dateChOut1" value="<%= product.dateChOut1%>">
+            <br>
+            <label for="">លើកទី២:</label>
+            <input type="text" class="form-control" name="dateChIn2" value="<%= product.dateChIn2%>">
+            <input type="text" class="form-control" name="dateChOut2" value="<%= product.dateChOut2%>">
+            <br>
+            <label for="">លើកទី៣:</label>
+            <input type="text" class="form-control" name="dateChIn3" value="<%= product.dateChIn3 %>">
+            <input type="text" class="form-control" name="dateChOut3" value="<%= product.dateChOut3%>">
+          </div>
+          <div class="form-group">
+            <label for="fileName" style="font-weight: bold;">អ្នកពិនិត្យ</label>
+            <input type="text" class="form-control" name="Author" value="<%= product.Author %>">
+          </div>
+          <div class="form-group">
+            <label for="fileName" style="font-weight: bold;">កាលបរិច្ឆេទចេញ-ចូល(ពិនិត្យ)</label>
+            <input type="text" class="form-control" name="AuthorChIn" value="<%= product.AuthorChIn %>">
+            <input type="text" class="form-control" name="AuthorChOut" value="<%= product.AuthorChOut %>">
+          </div>
+        <div class="form-group">
+          <label for="present" style="font-weight: bold;">ចូលរួម និងចាត់តំណាង</label>
+          <select id="category" class="form-control" name="present" style="height: max-content;">
+              <option selected value=""><%= product.present %></option>
+              <option value="ចូលរួម">ចូលរួម</option>
+              <option value="ចាត់តំណាង">ចាត់តំណាង</option>
+          </select>
+      </div>
+          <div class="form-group">
+            <label for="fileName" style="font-weight: bold;">កាលបរិច្ឆេទបញ្ជូនឯកសារ</label>
+            <input type="text" class="form-control" name="dateSend" value="<%= product.dateSend %>">
+            <input type="text" class="form-control" name="time" value="<%= product.time%>">
+          </div>
+            <div class="form-group">
+              <label for="file">Upload File</label>
+              <input type="file" class="form-control-file" id="file">
+            </div>           
+            <button type="submit" class="btn btn-primary">ធ្វើបច្ចុប្បន្នភាព</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (optional, only needed if you want to use Bootstrap JS features) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

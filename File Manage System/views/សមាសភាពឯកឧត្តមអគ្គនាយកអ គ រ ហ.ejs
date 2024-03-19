@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="../public/assets/css/Homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    
+    <head>
+        <title>សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ</title>
+        <link rel="icon" type="image/x-icon" href="../public/assets/img/android-chrome-512x512.png">
+    </head>
+</head>
+<body style="background-color: #efefef;">
+    <div>
+        <td>
+            <div class="header">
+                <div id="profile">
+                    <form action="/UserProfile"><button id="option_B"><img id="option" src="../assets/img/more_option.png" alt="" srcset=""></button></form>
+                    <div id="panda-box">
+
+                            <h2 id="pf_name">
+                                <% if (!username) { %>
+                                    User
+                                <% } else{ %>
+                                    <%=username%>
+                                <% } %>  
+                            </h2>
+                            <img id="panda" src="../assets/img/panda.jpg" alt="" srcset=""> 
+                
+                    </div>
+                </div>  
+            </div>
+
+        </td>
+    </div>
+
+        <td>
+            <div class="background"><br>
+                <form action="http://localhost:3000/"> <button style="background: none;border-color: #efefef;"><img id="logo" src="../public/assets/img/Moeys.png" alt="" srcset=""> 
+                
+                          </button> <br><span id="brandName">ប្រព័ន្ធគ្រប់គ្រងឯកសារ</span></form>
+                <br><br>
+                         
+
+            <button id="click1">ធ្វើបច្ចុប្បន្នភាព</button><form action="http://localhost:3000/add-product"><button id="click">បញ្ចូលលិខិត</button></form> <br><br><br><br>
+            <div>
+                <form class="search" action="search" method="POST">
+                    <input type="text" placeholder="ស្វែងរកឯកសារ....." name="search2">
+                    <button type="submit"><i class="fa fa-search" style="width: auto;"></i></button>
+                </form>
+            </div>
+                <% if (username == "admin2021") { %>
+                    <form action="http://localhost:3000/admin-Page"><button type="submit" id="adminBtn">Go to Admin Panel</button></form>
+                 <% } %>
+                 
+                    <br><br>
+                <div id="menu-Bar">
+                    <div id="menu-Bar">
+                        <form action="http://localhost:3000/"><button id="special">លិខិតស្នើសុំថវិកាចំណាយ</button></form> 
+                        <form action="http://localhost:3000/InvitaionLetter-page"><button id="special">លិខិតអញ្ជើញ</button></form>
+                        <form action="http://localhost:3000/BudgetUnit-page"><button id="special">អង្គភាពក្រោមអ.គ.រ.ហ</button></form>
+                        <form action="http://localhost:3000/GeneralAdmin-page"><button id="special">លិខិតរដ្ឋបាលទូទៅ</button></form> 
+                        <form action="http://localhost:3000/ProjectFile-page"><button id="special">ឯកសារគម្រោងដៃគូ</button></form>
+                        <form action="http://localhost:3000/Procurement-page"><button id="special">លទ្ធកម្ម</button></form>
+                        <form action="http://localhost:3000/Composition-page"><button id="special"><u>សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ</u></button></form> 
+                     </div>
+
+                    </div>
+                    <table style="width:100%;border-collapse: collapse;margin-bottom: 10px;">
+                        <thead>
+                            <tr>
+                              <th scope="col" style="border:1px solid black; text-align: center;width: 70px;">ល.រ</th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 90px;">លេខចូល</th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 90px;">លិខិតលេខ</th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 150px;">អង្គភាព</th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 200px;">បរិយាយ</th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 450px;">ពិនិត្យ និងផ្តល់យោលបល់
+                                <table style="width:100%;border-collapse: collapse;">
+                                    <tr>
+                                        <td style="text-align: center;border-top:1px solid black;border-left:0px;border-bottom:0px;width: 50%;">អ្នកពិនិត្យ និងផ្តល់យោលបល់
+                                        </td>
+                                        <td style="text-align: center;border-top:1px solid black;border-right:0px;border-bottom:0px; width: 50%;">កាលបរិច្ឆេទចេញ-ចូល
+                                            <table style="width:100%;border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="text-align: center;border-top:1px solid black;border-left:0px;border-bottom:0px;width: 25%;">ថ្ងៃចូល</td>
+                                                    <td style="text-align: center;border-top:1px solid black;border-right:0px;border-bottom:0px; width: 25%;">ថ្ងៃចេញ</td>
+                                                </tr>
+                                            </table>  
+                                    </tr>
+                                </table>  
+                              </th>
+                              <th scope="col" style="border:1px solid black;text-align: center; width: 150px;">កាលបរិច្ឆេទបញ្ជូនឯកសារ
+                                <table style="width:100%;border-collapse: collapse;">
+                                    <tr>
+                                        <td style="text-align: center;border-top:1px solid black;border-left:0px;border-bottom:0px;width: 50%;vertical-align: bottom;" >ថ្ងៃ/ខែ/ឆ្នាំ</td>
+                                        <td style="text-align: center;border-top:1px solid black;border-right:0px;border-bottom:0px; width: 50%;">ម៉ោង</td>
+                                    </tr>
+                                </table>  
+                             </th>
+                              <th scope="col" style="border:1px solid black;text-align: center;width: 100px;">ផ្សេងៗ/ <br> តាមដាន<br></th>
+                            </tr>
+                        </thead>
+    
+                        <% var j = 0 %> 
+                    <div class="product_section">  
+                                    
+                        <tbody> 
+                                
+                         <% for( let i = 0; i < product.length; i++ ) { %>
+                            <% if (product[i].category =="សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ") { %>
+                            <tr>
+                                   <td style="text-align: center;"><%= product[i].ID %></td>
+                                   <td style="text-align: center;"><%= product[i].FID %></td>
+                                   <td style="text-align: center;"><%= product[i].FNum %></td>
+                                   <td style="text-align: center;"><%= product[i].title %></td>
+                                   <td style="text-align: center;"><%= product[i].description %></td>  
+                                   <td>
+                                    <table style="width:100%;border-collapse: collapse;">
+                                                                                      
+                                               <td style="text-align: center;border-left:0px;border-bottom:0px; border-top:0px; width:300px;border-right:0px;"><%= product[i].Author %> </td>                                                                                                                                                                                      
+                                        <th>
+                                            <td style="text-align: center;border-right:1px solid black;border-bottom:0px;border-top:0px; width: 163px;"><%= product[i].AuthorChIn %></td>
+                                            <td style="text-align: center;border-right:1px solid black;border-bottom:0px;border-top:0px; border-right:0px;width:163px"><%= product[i].AuthorChOut %></td>  
+                                        </th>
+                                    </table>  
+                                  </td>  
+                                   <td style="text-align: center;">
+                                    <table style="width:100%;border-collapse: collapse;">
+                                        <tr>
+                                            <td style="text-align: center;border-top:0px;border-left:0px;border-bottom:0px;width: 50%;"><%= product[i].dateSend %></td>
+                                            <td style="text-align: center;border-top:0px;border-right:0px;border-bottom:0px; width: 50%;"><%= product[i].time %></td>
+                                        </tr>
+                                    </table>  
+                                  </td>
+                                  <td style="text-align: center;"><%= product[i].etc %></td> 
+                            </tr>     
+                                <% j++ %>    
+                            <% } %>
+                           <% } %>
+                        </tbody>    
+                        </table>
+               <% if (j==0) { %>
+                        <br>
+                        <div id="noproduct" style="margin-bottom: 10px;">
+                            មិនមានឯកសារ.
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <h2 style="text-align: center;">ប្រព័ន្ធគ្រប់គ្រងឯកសារ <br>២០២៤</h2>
+        </div>    
+    </td>
+    
+    </body>
+    
+    </html>
+               

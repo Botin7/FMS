@@ -1,0 +1,244 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="../public/assets/css/adminPage.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>`
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <!-- local  -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body style="background-color:rgb(99, 99, 131) ;">
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md  navbar-light">
+        <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse " id="myNavbar">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- sidebar navbar -->
+                    <div class="col-lg-3 col-xl-2 col-md-4 sidebar fixed-top" style="background-color: rgb(99, 99, 131)">
+                        <a href="#" class="navbar-brand text-white d-block mx-auto text-center mb-4 bottom-border pb-2">
+                        Admin
+                        </a>
+
+                        <img src="../public/assets/img/profile.jpg" width="40"height="40" alt="nice" class="rounded-circle mr-3">
+                        <a href="#" class="text-white ">Botin SREY </a>
+                        <div class="border-bottom pb-3"></div>
+                        <ul class="navbar-nav flex-column mt-4">
+                            <li class="nav-item">
+                                <a href="/admin-page" class="nav-link text-light p-3 mb-2  sidebar-link"> <i class="fa fa-home text-light fa-lg mr-3" aria-hidden="true"></i> Dashboard
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/profile-page" class="nav-link text-light p-3 mb-2  sidebar-link"> <i class="fa fa-user text-light fa-lg mr-3" aria-hidden="true"></i> Profile
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/message-box" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-envelope text-light fa-lg mr-3" aria-hidden="true"></i> Inbox
+                                </a>
+                            </li>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/add-product" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មានរបស់ឯកសារ
+                                </a>
+                                
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="/orderlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-book text-light fa-lg mr-3" aria-hidden="true"></i> Order Log
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/commentlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-comment text-light fa-lg mr-3" aria-hidden="true"></i> Comment Log
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                    <!-- end sidebar -->
+
+                    <!--  top nav-->
+                    <div style="background-color:black;" class="col-lg-9 col-xl-10 col-md-8 ml-auto fixed-top py-2 top-navbar">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h4 class="text-light text-uppercase mb-0"><i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មានរបស់ឯកសារ</h4>
+                            </div>
+                            <div class="col-md-5">
+                                <form>
+                                    <div class="input-group">
+                                        <input id="search" type="text" class="form-control"id="search-input" placeholder="Search here">
+                                        <button id="search_icon" type="button" class="btn btn-light"id="search-button"><i class="fa fa-search text-danger"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item icon-parent">
+                                        <a href="/message-box" class="nav-link icon-bullet "><i class="fa fa-comments text-light fa-lg mr-3"></i></a>
+                                    </li>
+                                     <li class="nav-item icon-parent">
+                                        <a href="#" class="nav-link icon-bullet"><i  class="fa fa-bell text-light fa-lg mr-3"></i></a>
+                                    </li>
+                                     <li class="nav-item icon-parent ">
+                                       <a href="/" class="nav-link "><i  class="fa fa-sign-out text-light fa-lg mr-3"></i></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                          
+                          
+                        </div>
+                      
+					</div>
+				</div>
+                        
+
+
+                    </div>
+                    <!-- end nav -->
+                </div>
+            </div>
+        </div>
+
+    </nav>
+    <div class="container" id="add_form" style="margin-top: 150px;">
+        <div class="col-sm-12" style="padding: 20px;" id="form" >
+     
+            <form action="/admin/add-product" method="POST"><h1 style="margin-left: 5px ;font-family:'MilkyNice-Clean', Arial, sans-serif;"><br> បញ្ចូលព័ត៌មានរបស់ឯកសារ</h1><br>
+                <div class="form-group">
+                    <label for="ID"style="font-weight: bold;">ល.រ</label>
+                    <input  class="form-control" id="title" name="ID">
+                </div>
+                
+                <div class="form-group">
+                    <label for="FID" style="font-weight: bold;">លេខចូល</label>
+                    <input  class="form-control" id="title" name="FID">
+                </div>
+                <div class="form-group">
+                    <label for="FNum" style="font-weight: bold;">លិខិតលេខ</label>
+                    <input  class="form-control" id="title" name="FNum">
+                </div>
+
+                <div class="form-group">
+                    <label for="title" style="font-weight: bold;">អង្គភាព</label>
+                    <input class="form-control" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="price" style="font-weight: bold;">ចំនួនថវិកា(លទ្ធកម្ម)</label>
+                    <input class="form-control" id="price" name="price">
+                </div>
+            
+                <div class="form-group">
+                    <label for="category" style="font-weight: bold;">ប្រភេទឯកសារ:</label>
+                    <select id="category" class="form-control" name="category" style="height: max-content;">
+                        <option selected value="">ដាក់ចូលក្នុងប្រភេទឯកសារ...</option>
+                        <option value="លិខិតស្នើសុំថវិកាចំណាយ">លិខិតស្នើសុំថវិកាចំណាយ(ឧទន,រជ្ជទេយ្យ,រៀបចំសិក្ខាសិលា...)</option>
+                        <option value="លិខិតអញ្ជើញ">លិខិតអញ្ជើញ</option>
+                        <option value="អង្គភាពក្រោមអ.គ.រ.ហ">អង្គភាពក្រោមអ.គ.រ.ហ</option>
+                        <option value="លិខិតរដ្ឋបាលទូទៅ">លិខិតរដ្ឋបាលទូទៅ(លិខិតទូទាត់,ឯកសារឆ្លងចំណារ,របាយការណ៍,សុំច្បាប់,បញ្ជីវត្តមាន,ប្រកាស,សជណ...)</option>
+                        <option value="ឯកសារគម្រោង">ឯកសារគម្រោង</option>
+                        <option value="លទ្ធកម្ម">លទ្ធកម្ម</option>
+                        <option value="សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ">សមាសភាពឯកឧត្តមអគ្គនាយកអ.គ.រ.ហ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Filetype" style="font-weight: bold;">ប្រភេទ:</label>
+                    <select id="category" class="form-control" name="Filetype" style="height: max-content;">
+                        <option selected value="">ជ្រើសរើសប្រភេទឯកសារ...</option>
+                        <option value="ឯកភាព">ឯកភាព</option>
+                        <option value="កាត់ស្តុក">កាត់ស្តុក</option>
+                        <option value="អញ្ជើញ">អញ្ជើញ</option>
+                        <option value="ទូទៅ">ទូទៅ</option>
+                        <option value="ប្រចាំសប្តាហ៍">ប្រចាំសប្តាហ៍</option>
+                        <option value="ប្រចាំខែ">ប្រចាំខែ</option>
+                        <option value="ប្រចាំឆ្នាំ">ប្រចាំឆ្នាំ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateSend" style="font-weight: bold;">កត់ត្រាឯកសារខុស</label>
+                    <div>&nbsp;&nbsp;&nbsp;លើកទី១
+                        <input class="form-control" id="title" name="dateChIn1" style="margin-bottom:10px" placeholder="ថ្ងៃចូល">
+                        <input class="form-control" id="title" name="dateChOut1" style="margin-bottom:10px" placeholder="ថ្ងៃចេញ">
+                    </div>
+                    <div>&nbsp;&nbsp;&nbsp;លើកទី២
+                        <input class="form-control" id="title" name="dateChIn2" style="margin-bottom:10px" placeholder="ថ្ងៃចូល">
+                        <input class="form-control" id="title" name="dateChOut2" style="margin-bottom:10px" placeholder="ថ្ងៃចេញ">
+                    </div>
+                    <div>&nbsp;&nbsp;&nbsp;លើកទី៣
+                        <input class="form-control" id="title" name="dateChIn3" style="margin-bottom:10px" placeholder="ថ្ងៃចូល">
+                        <input class="form-control" id="title" name="dateChOut3" style="margin-bottom:10px" placeholder="ថ្ងៃចេញ">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description"style="font-weight: bold;">បរិយាយ/កម្មវត្ថុនៃកិច្ចប្រជុំ</label>
+                    <textarea class="form-control" name="description" id="title"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dateSend" style="font-weight: bold;">ពិនិត្យ និងផ្តល់យោលបល់</label>
+                        <input class="form-control" id="title" name="Author" style="margin-bottom:10px ;" placeholder="ពិនិត្យ និងផ្តល់យោលបល់">        
+                        <input class="form-control" id="title" name="AuthorChIn" style="margin-bottom:10px" placeholder="ថ្ងៃចូល">
+                        <input class="form-control" id="title" name="AuthorChOut" style="margin-bottom:10px" placeholder="ថ្ងៃចេញ">                                  
+                </div>
+
+                <div class="form-group">
+                    <label for="present" style="font-weight: bold;">ចូលរួម/តំណាង:</label>
+                    <select id="category" class="form-control" name="present" style="height: max-content;">
+                        <option selected value="">ជ្រើសរើស...</option>
+                        <option value="ចូលរួម">ចូលរួម</option>
+                        <option value="ចាត់តំណាង">ចាត់តំណាង</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateSend"style="font-weight: bold;">កាលបរិច្ឆេតបញ្ជូនឯកសារ</label>
+                    <input class="form-control" id="title" name="dateSend" placeholder="ថ្ងៃ/ខែ/ឆ្នាំ"> <br>
+                    <input class="form-control" id="title" name="time"placeholder="ម៉ោង">
+                </div>
+
+                <div class="form-group">
+                    <label for="etc"style="font-weight: bold;">ផ្សេងៗ</label>
+                    <input class="form-control" id="title" name="etc">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 10%;margin-left: 900px;margin-bottom: 10px;">បញ្ជូន</button>
+            </form>
+            <br><br>
+        </div>
+    </div>
+
+</body>
