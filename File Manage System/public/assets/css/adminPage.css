@@ -1,5 +1,5 @@
 body {
-    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    font-family: 'Khmer OS Siemreap';
     font-weight: 300;
     font-size: 18px;
    
@@ -112,7 +112,7 @@ body {
 
 #adding{
 
-    font-family: 'MilkyNice-Clean', Arial, sans-serif;
+    font-family: 'Khmer OS Siemreap';
     min-height: 100vh;
     background: linear-gradient(65deg,rgb(181, 41,231)),
     rgb(216,23,23);
@@ -136,14 +136,25 @@ form input{
 }
  form button{
      width: 50px;
-     height: 40px;
+     height: 50px;
      border: none;
-     background: teal;
+     background: rgb(2, 100, 164);
      color: white;
      outline: none;
      cursor: pointer;
  }
-
+ td{
+    font-family: 'Khmer OS Siemreap';
+ }
+h2{
+    font-family: 'Khmer OS Siemreap';
+}
+h4{
+    font-family: 'Khmer OS Siemreap';
+}
+::placeholder{
+        font-family: 'Khmer OS Siemreap';
+}
  ul{
      list-style-type:none;
      width: 500px;
@@ -185,7 +196,7 @@ form input{
 }
 .review_info {
     display: flex;
-    width: 95%;
+    width: 100%;
     margin:  25px auto;
     align-items: center;
     font-size: 1.1em;

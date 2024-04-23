@@ -13,10 +13,30 @@ const shopRoutes = require('./router/shop');
 const comment = require('./router/api/comment');
 const price = require('./router/api/price');
 const shop = require('./router/shop');
+const addPizza = require('./models/addPizza.model');
+const url = require('url'); 
+// const router = express.Router();
+const sendAlert = require('./controller/telegramBot');
 
 
 
 
+router.get('/telegramBot', (req, res) => {
+    res.render('TelegramBot');
+});
+router.post('/sendAlert',(req, res) => {
+    console.log('==================',req.body)
+    const caption = req.body.alertMessage;
+    // const file = req.body.alertFile;
+    try {
+        sendAlert(caption);
+        res.send('Alert sent!');
+      } catch (error) {
+        console.error(error);
+        res.status(500).send('Error sending alert!');
+      }
+    res.redirect('/');
+});
 app.set('view engine', 'ejs');
 app.set('views','views');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -37,6 +57,20 @@ app.use(session({
     secret: "shh, it's a secrete",
     name: 'sid'
 }));
+app.use(cookiePaser());
+
+// Endpoint to clear cookies
+app.get('/clear-cookies', (req, res) => {
+    // Iterate through each cookie and set its expiration date to the past
+    Object.keys(req.cookies).forEach(cookieName => {
+        res.clearCookie(cookieName);
+        
+    });
+    res.redirect(url.format({
+        pathname:"/all",
+    }));
+});
+
 
 //Change the user1:user1@cluster-ecommerce to your mongoDB mongodb+srv://<username>:<password>@<clustername>-k1jer.mongodb.net/test?retryWrites=true&w=majority
 mongoose.connect('mongodb+srv://user1:user1@cluster-ecommerce.k1jer.mongodb.net/users?retryWrites=true&w=majority', {useFindAndModify: false}).then(result=>{
@@ -52,6 +86,8 @@ app.use(bodyParser.json());
 app.use(fileUpload({
     limits: { fileSize: 50 * 1024 * 1024 },
 }));
+
+
 
 //method override
 

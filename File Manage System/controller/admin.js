@@ -4,6 +4,7 @@ const Order = require('../models/order');
 const path = require('path');
 const addPizza = require('../models/addPizza.model');
 
+
 exports.getProductForm = (req, res, next) => {
     if(req.cookies["username"] == "admin2021") {
         res.render('បញ្ចូលព័ត៌មាន', { name: 'Botin', path: '/all-product', pageTitle: 'Add Product' });
@@ -63,7 +64,7 @@ exports.postProduct = (req, res, next) => {
         page : page,
     });
     pizza.save().then(result=>{
-        console.log('Pizza is created');
+        console.log('File has created');
         res.redirect('/admin-page');
     }).catch(err=>{
         console.log(err);

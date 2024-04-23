@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700|Inconsolata:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="../public/assets/css/style.css">
 
     <!-- local  -->
     <link rel="stylesheet" href="style.css">
@@ -66,18 +66,21 @@
                                 <a href="/profile-page" class="nav-link text-light p-3 mb-2  sidebar-link"> <i class="fa fa-user text-light fa-lg mr-3" aria-hidden="true"></i> Profile
                                 </a>
                             </li>
+                        <!--
                             <li class="nav-item">
                                 <a href="/message-box" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-envelope text-light fa-lg mr-3" aria-hidden="true"></i> Inbox
                                 </a>
                             </li>
+                        -->
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/add-product" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មានរបស់ឯកសារ
+                                <a href="/add-product" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មាន
                                 </a>
                                 
 
                             </li>
+                        <!--  
                             <li class="nav-item">
                                 <a href="/orderlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-book text-light fa-lg mr-3" aria-hidden="true"></i> Order Log
                                 </a>
@@ -86,7 +89,7 @@
                                 <a href="/commentlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-comment text-light fa-lg mr-3" aria-hidden="true"></i> Comment Log
                                 </a>
                             </li>
-                        
+                        -->  
                         </ul>
                     </div>
                     <!-- end sidebar -->
@@ -225,7 +228,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="dateSend"style="font-weight: bold;">កាលបរិច្ឆេតបញ្ជូនឯកសារ</label>
+                    <label for="dateSend"style="font-weight: bold;">កាលបរិច្ឆេទបញ្ជូនឯកសារ</label>
                     <input class="form-control" id="title" name="dateSend" placeholder="ថ្ងៃ/ខែ/ឆ្នាំ"> <br>
                     <input class="form-control" id="title" name="time"placeholder="ម៉ោង">
                 </div>
@@ -238,6 +241,7 @@
                 <button type="submit" class="btn btn-primary" style="width: 10%;margin-left: 900px;margin-bottom: 10px;">បញ្ជូន</button>
             </form>
             <br><br>
+            <form action="/telegramBot" style="background: none;border: none; box-shadow: none;"> <button style="width: fit-content;">តេស្តទៅTelegram</button></form>
         </div>
     </div>
 

@@ -22,10 +22,10 @@ exports.login = (req, res) => {
           // if password is correct, return success, with cookie save
           res.cookie('username', username, {expire: 3600 * 1000});
           res.cookie('logged-time', new Date().toISOString(), {expire: 3600 * 1000});
-          res.redirect('/');
+          res.redirect('/all');
         } else {
           // else return fail
-          res.render("signin", {error: true, message: "Password incorrect"});
+          res.render("signin", {error: true, message: "លេខសម្ងាត់មិនត្រឹមត្រូវ"});
         }
       })
     } else {

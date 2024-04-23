@@ -7,7 +7,8 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>ទំព័រគ្រប់គ្រង</title>
+    <link rel="icon" type="image/x-icon" href="../public/assets/img/android-chrome-512x512.png">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -60,24 +61,26 @@
                         <div class="border-bottom pb-3"></div>
                         <ul class="navbar-nav flex-column mt-4">
                             <li class="nav-item">
-                                <a href="/admin-page" class="nav-link text-light p-3 mb-2  sidebar-link"> <i class="fa fa-home text-light fa-lg mr-3" aria-hidden="true"></i> Dashboard
+                                <a href="/admin-page" class="nav-link text-light p-3 mb-2  "> <i class="fa fa-home text-light fa-lg mr-3" aria-hidden="true"></i> Dashboard
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/profile-page" class="nav-link text-light p-3 mb-2  sidebar-link"> <i class="fa fa-user text-light fa-lg mr-3" aria-hidden="true"></i> Profile
+                                <a href="/profile-page" class="nav-link text-light p-3 mb-2  "> <i class="fa fa-user text-light fa-lg mr-3" aria-hidden="true"></i> Profile
                                 </a>
                             </li>
+                      <!--       
                             <li class="nav-item">
                                 <a href="/message-box" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-envelope text-light fa-lg mr-3" aria-hidden="true"></i> Inbox
                                 </a>
                             </li>
+                        -->      
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/add-product" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មាន
+                                <a href="/add-product" class="nav-link text-light p-3 mb-2"> <i class="fa fa-plus text-light fa-lg mr-3" aria-hidden="true"></i> បញ្ចូលព័ត៌មាន
                                 </a>
                                 
-
+                     <!--
                             </li>
                             <li class="nav-item">
                                 <a href="/orderlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-book text-light fa-lg mr-3" aria-hidden="true"></i> Order Log
@@ -87,7 +90,7 @@
                                 <a href="/commentlog" class="nav-link text-light p-3 mb-2 sidebar-link"> <i class="fa fa-comment text-light fa-lg mr-3" aria-hidden="true"></i> Comment Log
                                 </a>
                             </li>
-                        
+                        -->
                         </ul>
                     </div>
                     <!-- end sidebar -->
@@ -96,15 +99,17 @@
                     <div style="background-color: rgb(99, 99, 131);margin-left: 250px;align-items: center;"  >
                         <div class="row align-items-center" style="background-color: black;margin-bottom:15px">
                             <div class="col-md-4" >
-                                <h4 class="text-light text-uppercase mb-0"><i class="fa fa-home text-light fa-lg mr-3" aria-hidden="true"></i>Dashboard</h4>
+                                <h4 class="text-light text-uppercase mb-0"><i class="fa fa-home text-light fa-lg mr-3" aria-hidden="true"></i>ផ្ទាំងគ្រប់គ្រង</h4>
                             </div>
                             <div class="col-md-5">
-                                <form>
+                                
                                     <div class="input-group">
-                                        <input id="search" type="text" class="form-control"id="search-input" placeholder="Search here">
-                                        <button id="search_icon" type="button" class="btn btn-light"id="search-button"><i class="fa fa-search text-danger"></i></button>
+                                        <form class="search" action="searchAdmin" method="POST" >
+                                            <input type="text" placeholder="ស្វែងរកឯកសារ....." name="search2">
+                                            <button type="submit"><i class="fa fa-search"></i></button>
+                                        </form>
                                     </div>
-                                </form>
+                                
                             </div>
                             <div class="col-md-3">
                                 <ul class="navbar-nav">
@@ -115,88 +120,189 @@
                                         <a href="#" class="nav-link icon-bullet"><i  class="fa fa-bell text-light fa-lg mr-3"></i></a>
                                     </li>
                                      <li class="nav-item icon-parent ">
-                                       <a href="/" class="nav-link "><i  class="fa fa-sign-out text-light fa-lg mr-3"></i></a>
+                                       <a href="/all" class="nav-link "><i  class="fa fa-sign-out text-light fa-lg mr-3"></i></a>
                                     </li>
                                 </ul>
 
                             </div>
-                        </div>
-                        
-                            <h2 id="comment" style="color: white;">ព័ត៌មានរបស់ឯកសារ</h2>
-                            <table >
-                                <% var j = 2 %> 
-                              
-                                <% for(var i=0; i< 2; i++) {%> 
-                                <tr>
-                                    <td class="review" style="border: 2px solid black;" >
-                                        <div class="review_info" >
-                                            <div class="reviewer_profile_pic"><img src="../assets/img/panda.jpg" alt="" width="40%"></div>
-                                            <div>
-                                                <div>ល.រ:&nbsp; <span class="reviewer_name"><%= product[i].ID %></span></div>
-                                                <div>លេខចូល:&nbsp; <span class="reviewer_name"><%= product[i].FID %></span></div>
-                                                <div>លិខិតលេខ:&nbsp; <span class="reviewer_name"><%= product[i].FNum %></span></div>
-                                                <div>អង្គភាព:&nbsp; <span class="reviewer_name"><%= product[i].title %></span></div>
-                                                <div style="width: max-content;">ចំនួនថវិកា:&nbsp; <span class="reviewer_name"><%= product[i].price %></span></div>
-                                                <div style="width: max-content;">ប្រភេទឯកសារ:&nbsp; <span class="reviewer_name"><%= product[i].category %></span></div>
-                                                <div>ប្រភេទ:&nbsp; <span class="reviewer_name"><%= product[i].Filetype %></span></div>
-                                                <div>
-                                                    <table>កត់ត្រាឯកសារខុស: <br>
-                                                        <tr><span class="reviewer_name">+ លើកទី១</span>
-                                                            <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name" style="font-size: medium;"><%= product[i].dateChIn1 %></span></div>
-                                                            <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"  class="reviewer_name"><%= product[i].dateChOut1 %></span></div>
-                                                        </tr>
-                                                        <tr><span class="reviewer_name">+ លើកទី២</span>
-                                                            <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name" style="font-size: medium;"><%= product[i].dateChIn2 %></span></div>
-                                                            <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"  class="reviewer_name"><%= product[i].dateChOut2 %></span></div>
-                                                        </tr>
-                                                        <tr><span class="reviewer_name">+ លើកទី៣</span>
-                                                            <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name" style="font-size: medium;"><%= product[i].dateChIn3 %></span></div>
-                                                            <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"  class="reviewer_name"><%= product[i].dateChOut3 %></span></div>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div>
-                                                    <table>
-                                                        <tr>
-                                                            <div>អ្នកពិនិត្យ និងផ្តល់យោលបល់:&nbsp; <span class="reviewer_name" style="font-size: medium;"><%= product[i].Author %></span></div>
-                                                            <div>កាលបរិច្ឆេទចេញ-ចូល(ពិនិត្យឯកសារ):&nbsp; <span style="font-size: medium;"  class="reviewer_name"><br>ចូល:&nbsp;<%= product[i].AuthorChIn %> <br>ចេញ:&nbsp;<%= product[i].AuthorChOut %></span></div>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div>ចូលរួម និងចាត់តំណាង:&nbsp; <span class="reviewer_name"><%= product[i].present%></span></div>
-                                                <div>កាលបរិច្ឆេទបញ្ជូនឯកសារ:&nbsp; <span class="reviewer_name">
-                                                    <table>
-                                                        <tr>
-                                                            <div>ថ្ងៃ/ខែ/ឆ្នាំ:&nbsp; <span style="font-size: medium;"><%= product[i].dateSend %></span></div>
-                                                            <div>ម៉ោង:&nbsp; <span style="font-size: medium;"><%= product[i].time %></span></div>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                                <div style="width: max-content;">បរិយាយ:&nbsp; <span class="reviewer_name"><%= product[i].description %></span></div>
-                                                <div>ផ្សេងៗ:&nbsp; <span class="reviewer_name"><%= product[i].etc %></span></div>
-                                                <form action="http://localhost:3000/delete" method="POST" style="float: right;">
-                                                    <input type="hidden" name="prodId" value="<%= product[i].id%>">
-                                                    <button class="btn btn-danger" type="submit" style="width: 100px;"><i class="fa fa-trash"></i>delete</button></form>
-                                                <form action ="http://localhost:3000/edit-filepage" method="GET" style="float: right;">
-                                                    <input type="hidden" name="prodId" value="<%= product[i].id%>">
-                                                    <button type="submit" class="btn btn-warning" style="width: 100px;"><i class="fa fa-edit"></i></i>Edit</button>
-                                                </form>
+                        </div>                    
+                        <h2 id="comment" style="color: white;">ព័ត៌មានរបស់ឯកសារ</h2>
+                        <table style="width: 100%;">
+                            <% var j=2 %>
 
+                                <% for(var i=0; i<length; i++) {%>
+                                    <tr>
+                                        <td class="review" style="border: 2px solid black;">
+                                            <div class="review_info" style="margin-left: 30px;">
+                                                
+                                                <div>
+                                                    <div>ល.រ:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.ID %>
+                                                        </span></div>
+                                                    <div>លេខចូល:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.FID %>
+                                                        </span></div>
+                                                    <div>លិខិតលេខ:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.FNum %>
+                                                        </span></div>
+                                                    <div>អង្គភាព:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.title %>
+                                                        </span></div>
+                                                    <div style="width: max-content;">ចំនួនថវិកា:&nbsp; <span
+                                                            class="reviewer_name">
+                                                            <%= product[i]?.price %>
+                                                        </span></div>
+                                                    <div style="width: max-content;">ប្រភេទឯកសារ:&nbsp; <span
+                                                            class="reviewer_name">
+                                                            <%= product[i]?.category %>
+                                                        </span></div>
+                                                    <div>ប្រភេទ:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.Filetype %>
+                                                        </span></div>
+                                                    <div>
+                                                        <table>កត់ត្រាឯកសារខុស: <br>
+                                                            <tr><span class="reviewer_name">+ លើកទី១</span>
+                                                                <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name"
+                                                                        style="font-size: medium;">
+                                                                        <%= product[i]?.dateChIn1 %>
+                                                                    </span></div>
+                                                                <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"
+                                                                        class="reviewer_name">
+                                                                        <%= product[i]?.dateChOut1 %>
+                                                                    </span></div>
+                                                            </tr>
+                                                            <tr><span class="reviewer_name">+ លើកទី២</span>
+                                                                <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name"
+                                                                        style="font-size: medium;">
+                                                                        <%= product[i]?.dateChIn2 %>
+                                                                    </span></div>
+                                                                <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"
+                                                                        class="reviewer_name">
+                                                                        <%= product[i]?.dateChOut2 %>
+                                                                    </span></div>
+                                                            </tr>
+                                                            <tr><span class="reviewer_name">+ លើកទី៣</span>
+                                                                <div>ថ្ងៃចូល:&nbsp; <span class="reviewer_name"
+                                                                        style="font-size: medium;">
+                                                                        <%= product[i]?.dateChIn3 %>
+                                                                    </span></div>
+                                                                <div>ថ្ងៃចេញ:&nbsp; <span style="font-size: medium;"
+                                                                        class="reviewer_name">
+                                                                        <%= product[i]?.dateChOut3 %>
+                                                                    </span></div>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <div>អ្នកពិនិត្យ និងផ្តល់យោលបល់:&nbsp; <span
+                                                                        class="reviewer_name"
+                                                                        style="font-size: medium;">
+                                                                        <%= product[i]?.Author %>
+                                                                    </span></div>
+                                                                <div>កាលបរិច្ឆេទចេញ-ចូល(ពិនិត្យឯកសារ):&nbsp; <span
+                                                                        style="font-size: medium;"
+                                                                        class="reviewer_name"><br>ចូល:&nbsp;<%=
+                                                                            product[i]?.AuthorChIn %> <br>ចេញ:&nbsp;<%=
+                                                                                product[i]?.AuthorChOut %></span></div>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div>ចូលរួម និងចាត់តំណាង:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.present%>
+                                                        </span></div>
+                                                    <div>កាលបរិច្ឆេទបញ្ជូនឯកសារ:&nbsp; <span class="reviewer_name">
+                                                            <table>
+                                                                <tr>
+                                                                    <div>ថ្ងៃ/ខែ/ឆ្នាំ:&nbsp; <span
+                                                                            style="font-size: medium;">
+                                                                            <%= product[i]?.dateSend %>
+                                                                        </span></div>
+                                                                    <div>ម៉ោង:&nbsp; <span style="font-size: medium;">
+                                                                            <%= product[i]?.time %>
+                                                                        </span></div>
+                                                                </tr>
+                                                            </table>
+                                                    </div>
+                                                    <div style="width: max-content;">បរិយាយ:&nbsp; <span
+                                                            class="reviewer_name">
+                                                            <%= product[i]?.description %>
+                                                        </span></div>
+                                                    <div>ផ្សេងៗ:&nbsp; <span class="reviewer_name">
+                                                            <%= product[i]?.etc %>
+                                                        </span></div>
+                                                    <div style="margin-left: 200px;">
+                                                    <form action="http://localhost:3000/delete" method="POST"
+                                                        style="float: right;">
+                                                        <input type="hidden" name="prodId" value="<%= product[i]?.id%>">
+                                                        <button class="btn btn-danger" type="submit"
+                                                            style="width: 100px;"><i
+                                                                class="fa fa-trash"></i>delete</button>
+                                                    </form>
+                                                    <form action="http://localhost:3000/edit-filepage" method="GET"
+                                                        style="float: right;">
+                                                        <input type="hidden" name="prodId" value="<%= product[i]?.id%>">
+                                                        <button type="submit" class="btn btn-warning"
+                                                            style="width: 100px;"><i
+                                                                class="fa fa-edit"></i></i>Edit</button>
+                                                    </form>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div> 
-                                    </td>
-                                </tr>
+                                        </td>
+                                    </tr>
                                     <% } %>
-                            </table>
-                        </div>
-					</div>
-				</div>
-                        
-
+                        </table>
+                        <% if (pages> 0) { %>
+                            <ul class="pagination text-center" style="margin: 2px 25px 2px;border: 1px solid black; background-color: white;width: 80%;">
+                                <% if (current==1) { %>
+                                    <li class="disabled" style="margin: 2px 25px 2px;"><a>First</a></li>
+                                    <% } else { %>
+                                        <li><a href="/admin-Page?page">First</a></li>
+                                        <% } %>
+                                            <% var i=(Number(current)> 5 ? Number(current) - 4 : 1) %>
+                                                <% if (i !==1) { %>
+                                                    <li class="disabled"><a>...</a></li>
+                                                    <% } %>
+                                                        <% for (; i <=(Number(current) + 4) && i <=pages; i++) { %>
+                                                            <% if (i==current) { %>
+                                                                <li id="active" style="margin: 2px 25px 2px;text-decoration: underline;"><a>
+                                                                        <%= i %>
+                                                                    </a></li>
+                                                                <% } else { %>
+                                                                    <li style="margin: 2px 25px 2px;"><a href="/admin-page?page=<%= i %>">
+                                                                            <%= i %>
+                                                                        </a></li>
+                                                                    <% } %>
+                                                                        <% if (i==Number(current) + 4 && i < pages) { %>
+                                                                            <li class="disabled" style="margin: 2px 25px 2px;"><a>...</a></li>
+                                                                            <% } %>
+                                                                                <% } %>
+                                                                                    <% if (current==pages) { %>
+                                                                                        <li class="disabled" style="margin: 2px 25px 2px;"><a>Last</a>
+                                                                                        </li>
+                                                                                        <% } else { %>
+                                                                                            <li style="margin: 2px 25px 2px;"><a
+                                                                                                    href="/admin-page?page=<%= pages %>">Last</a>
+                                                                                            </li>
+                                                                                            <% } %>
+                            </ul>
+                            <% } %>
                     </div>
-                    <!-- end nav -->
                 </div>
             </div>
+
+
+        </div>
+        <%= length %>
+        <!-- end nav -->
+
+        </div>
+        </div>
         </div>
 
+
     </nav>
+    
+</body>

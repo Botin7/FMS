@@ -37,7 +37,7 @@
 
         <td>
             <div class="background"><br>
-                <form action="http://localhost:3000/"> <button style="background: none;border-color: #efefef;"><img id="logo" src="../public/assets/img/Moeys.png" alt="" srcset=""> 
+                <form action="http://localhost:3000/all"> <button style="background: none;border-color: #efefef;"><img id="logo" src="../public/assets/img/Moeys.png" alt="" srcset=""> 
                 
                           </button> <br><span id="brandName">ប្រព័ន្ធគ្រប់គ្រងឯកសារ</span></form>
                 <br><br>
@@ -45,7 +45,7 @@
 
                 <button id="click1">ធ្វើបច្ចុប្បន្នភាព</button><form action="http://localhost:3000/add-product"><button id="click">បញ្ចូលលិខិត</button></form> <br><br><br><br>
 
-                <form class="search" action="/search" method="POST">
+                <form class="search" action="search" method="POST" >
                     <input type="text" placeholder="ស្វែងរកឯកសារ....." name="search2">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
@@ -57,6 +57,7 @@
                     <br><br>
                 <div id="menu-Bar">
                     <div id="menu-Bar">
+                        <form action="http://localhost:3000/all"><button id="special">ឯកសារទាំងអស់</button></form> 
                         <form action="http://localhost:3000/"><button id="special">លិខិតស្នើសុំថវិកាចំណាយ</button></form> 
                         <form action="http://localhost:3000/InvitaionLetter-page"><button id="special">លិខិតអញ្ជើញ</button></form>
                         <form action="http://localhost:3000/BudgetUnit-page"><button id="special">អង្គភាពក្រោមអ.គ.រ.ហ</button></form>
@@ -149,7 +150,12 @@
                                     <td style="text-align: center;"><%= product[i].FNum %></td>
                                     <td style="text-align: center;"><%= product[i].title %> </td>
                                     <td style="text-align: center;"><%= product[i].Filetype %> </td>
-                                    <td style="text-align: center;"><%= product[i].description %></td> 
+                                    <td>
+                                        <form action ="http://localhost:3000/edit-filepage" method="GET" style="float: right;">
+                                            <input type="hidden" name="prodId" value="<%= product[i].id%>">
+                                            <button type="submit" style="background: none; border: 0px;font-weight: normal;font-size: medium;float: left;"><%= product[i].description %></button>
+                                        </form>
+                                    </td> 
                                     <td>
                                         <table style="width:100%;border-collapse: collapse;">
                                             <tr>                                                
@@ -199,7 +205,7 @@
                     <% } %>
                 </div>
             </div>
-            <h2 style="text-align: center;">ប្រព័ន្ធគ្រប់គ្រងឯកសារ <br>២០២៤</h2>
+            <h4 style="text-align: center; font-family: Khmer OS Siemreap;">© រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ៖​ អគ្គនាយកដ្ឋានរដ្ឋបាល និងហិរញ្ញវត្ថុ | ឆ្នាំ២០២៤</h2>
         </div>    
     </td>
     

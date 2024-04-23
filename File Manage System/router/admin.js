@@ -11,6 +11,7 @@ const addPizza = require('../models/addPizza.model');
 
 
 router.get('/',appController.getHomePage)
+router.get('/all',appController.getAllFile)
 router.get('/InvitaionLetter-page',appController.getMondaySpecial)
 router.get('/GeneralAdmin-page',appController.getCombodeals)
 router.get('/ProjectFile-page',appController.getdrinksPage)
@@ -18,7 +19,7 @@ router.get('/BudgetUnit-page',appController.getpizzaPage)
 router.get('/Procurement-page',appController.getsidesPage)
 router.get('/Composition-page',appController.getAttendacePage)
 router.get('/profile-page',appController.getprofilePage)
-router.get('/admin-Page',appController.getadminPage)
+router.get('/admin-Page?:page',appController.getadminPage)
 router.get('/UserProfile',appController.getUserProfile)
 router.get('/message-box',appController.getmessage)
 router.get('/recipt',appController.getrecipt)
@@ -36,10 +37,14 @@ router.post('/edit-product', adminController.editProductPost);
 router.post('/delete-product', adminController.deleteProduct);
 router.post('/add-order', adminController.postOrder);
 router.post('/save-username', adminController.postOrder);
-router.get('/purchase',adminController.purchase)
+router.get('/purchase',adminController.purchase);
 router.get('/orderlog',appController.getorderlog);
 router.get('/commentlog',appController.getcommentlog);
-router.post('/search', appController.search);
+router.post('/search',appController.search);
+router.post('/searchAdmin',appController.searchAdmin);
+router.post('/page',appController.getPage);
+
+
 
 router.post('/edit-filepage/:id',(req, res, next)=>{
     addPizza.findByIdAndUpdate({_id: req.params.id}, req.body, (err, docs)=>{
@@ -53,7 +58,21 @@ router.post('/edit-filepage/:id',(req, res, next)=>{
     })
 })
 
-   
+/*router.get('/search/:key',async(req, res, next)=>{
+  let data= await addPizza.find(
+    {
+        "$or":[
+            {category: {$regex: req.params.key}},
+            {title: {$regex: req.params.key}},
+            {description: {$regex: req.params.key}},
+        ],
+    },)
+  res.send(data);
+  console.log(data);
+})*/
+
+
+
 module.exports = router;
 
 
